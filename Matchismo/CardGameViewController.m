@@ -27,12 +27,12 @@
     if (!_game)
     {
         _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                 matchCount:self.numberOfCardsToMatch
                                                   usingDeck:self.deck];
         _game.matchBonusMultiplier = self.matchBonusMultiplier;
         _game.mismatchPenalty = self.mismatchPenalty;
         _game.flipCost = self.flipCost;
         _game.gameName = self.gameName;
+        _game.numberOfCardsToMatch = self.numberOfCardsToMatch;
     }
     
     return _game;

@@ -14,7 +14,6 @@
 
 // Designated initializer
 - (id)initWithCardCount:(NSUInteger)count
-             matchCount:(NSUInteger)matchCount
               usingDeck:(Deck *)deck;
 
 - (void)flipCardAtIndex:(NSUInteger)index;
@@ -25,6 +24,7 @@
 @property (readonly, nonatomic) NSString *result;
 @property (readonly, nonatomic) NSArray *cardsFromResult; // of Card
 @property (strong, nonatomic) NSString *gameName;
+@property (nonatomic) int numberOfCardsToMatch;
 @property (nonatomic) CGFloat matchBonusMultiplier;
 @property (nonatomic) int mismatchPenalty;
 @property (nonatomic) int flipCost;

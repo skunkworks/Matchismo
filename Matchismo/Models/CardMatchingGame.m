@@ -13,7 +13,6 @@
 @property (readwrite, nonatomic) int score;
 @property (readwrite, nonatomic) NSString *result;
 @property (readwrite, nonatomic) NSArray *cardsFromResult; // of Card
-@property (nonatomic) int numberOfCardsToMatch;
 @property (strong, nonatomic) NSMutableArray *cards; // of Card
 @property (strong, nonatomic) GameResult *gameResult;
 @end
@@ -69,7 +68,6 @@
 }
 
 - (id)initWithCardCount:(NSUInteger)count
-             matchCount:(NSUInteger)matchCount
               usingDeck:(Deck *)deck
 {
     self = [super init];
@@ -85,7 +83,6 @@
                 break;
             }
         }
-        self.numberOfCardsToMatch = matchCount;
     }
     
     return self;
